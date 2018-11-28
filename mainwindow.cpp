@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "string.h"
+
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -31,7 +33,7 @@ void MainWindow::on_pushButton_clicked()
     QString in_carGas = ui->lineEdit_4->text();
     double d_carGas = in_carGas.toDouble();
 
-    QString in_income = ui->lineEdit_5->text();
+    QString in_income = ui->lineEdit_5->text();     // this will be subtracted by the expenses
     double d_income = in_income.toDouble();
 
 
@@ -48,22 +50,30 @@ void MainWindow::on_pushButton_clicked()
     QString in_Groceries = ui->lineEdit_9->text();
     double d_Groceries = in_Groceries.toDouble();
 
-// new addtions end ( the modification were made accordingly
+    QString in_Miscellaneous = ui->lineEdit_10->text();
+    double d_Miscellaneous = in_Miscellaneous.toDouble();
 
 
-    double Result = d_income - (d_gas + d_electric + d_books + d_carGas);
+    double Total_Expenses =d_gas + d_electric + d_books + d_carGas + d_rent + d_HealthInsurace + d_CarInsurance + d_Groceries + d_Miscellaneous;
+
+    //double Result = d_income - (d_gas + d_electric + d_books + d_carGas + d_rent + d_HealthInsurace + d_CarInsurance + d_Groceries + d_Miscellaneous);
+
+    double Result = d_income -  Total_Expenses;
 
     //ui->label_7; will show result
     QString result;
 
     if (Result < 0){
-      result ="Your screwed! You could get another job or find a cheaper alternative way of living.";
+      result ="Your screwed! \n You could get another job or find a cheaper alternative way of living.";
+
     }
     else if (Result == 0.0){
        result = "You may survive, but not enought for food.";
+
     }
     else if (Result > 0 && Result < 100){
         result = "Now you can buy some \"light\" food.";
+
     }
     else if (Result > 100){
       result = "I guess your alright.";

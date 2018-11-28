@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QSplashScreen *splash = new QSplashScreen;                      // added new
-    splash -> setPixmap(QPixmap("C:/Users/MD/Desktop/icon.ico"));   // added new
+    splash -> setPixmap(QPixmap("C:/Users/MD/Desktop/Qt_GUI/Splash_Screen.jpg"));   // please change file type and path of file respectivley
     splash -> show();                                               // added new
 
     MainWindow w;
