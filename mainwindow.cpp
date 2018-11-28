@@ -35,11 +35,20 @@ void MainWindow::on_pushButton_clicked()
     double d_income = in_income.toDouble();
 
 
+// new addition begins
+    QString in_rent = ui->lineEdit_6->text();
+    double d_rent = in_rent.toDouble();
 
+    QString in_HealthInsurance = ui->lineEdit_7->text();
+    double d_HealthInsurace = in_HealthInsurance.toDouble();
 
+    QString in_CarInsurance = ui->lineEdit_8->text();
+    double d_CarInsurance = in_CarInsurance.toDouble();
 
+    QString in_Groceries = ui->lineEdit_9->text();
+    double d_Groceries = in_Groceries.toDouble();
 
-
+// new addtions end ( the modification were made accordingly
 
 
     double Result = d_income - (d_gas + d_electric + d_books + d_carGas);
