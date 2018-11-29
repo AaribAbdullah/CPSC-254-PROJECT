@@ -62,6 +62,10 @@ void MainWindow::on_pushButton_clicked()
 
     //ui->label_7; will show result
     QString result;
+    QString extra, str_income, str_expenses, str_netIncome;
+    str_income = QString::number(d_income);
+    str_expenses = QString::number(Total_Expenses);
+    str_netIncome = QString::number(Result);
 
     if (Result < 0){
       result ="Your screwed! \n You could get another job or find a cheaper alternative way of living.";
@@ -78,6 +82,9 @@ void MainWindow::on_pushButton_clicked()
     else if (Result > 100){
       result = "I guess your alright.";
     }
+
+    extra = "\nIncome: " + str_income +"\nYour Expenses totaled: " + str_expenses + "\nNet Income: " + str_netIncome + '\n';
+    result += extra;
 
     ui->label_7->setText(result);
 

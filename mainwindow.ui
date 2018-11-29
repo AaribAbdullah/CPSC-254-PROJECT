@@ -148,8 +148,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>330</y>
+      <x>50</x>
+      <y>250</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -161,10 +161,10 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>350</y>
-      <width>571</width>
-      <height>41</height>
+      <x>50</x>
+      <y>280</y>
+      <width>461</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="text">
@@ -308,7 +308,7 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
