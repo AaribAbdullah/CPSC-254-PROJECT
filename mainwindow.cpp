@@ -73,14 +73,18 @@ void MainWindow::on_pushButton_clicked()
     }
     else if (Result == 0.0){
        result = "You may survive, but not enought for food.";
-
     }
-    else if (Result > 0 && Result < 100){
-        result = "Now you can buy some \"light\" food.";
-
+    else if (Result > 0 && Result < 10){
+        result = "Ok you can maybe eat.";
     }
-    else if (Result > 100){
-      result = "I guess your alright.";
+    else if (Result > 0 && Result < 30){
+        result = "You can go for light grocery shopping.";
+    }
+    else if (Result > 0 && Result <= 50){
+      result = "I you can buy some light groceries and maybe eat out once.";
+    }
+    else if (Result > 0 && Result > 50){
+      result = "Congratulations!\nYour circumstances allow to eat like a normal human being.";
     }
 
     extra = "\nIncome: " + str_income +"\nYour Expenses totaled: " + str_expenses + "\nNet Income: " + str_netIncome + '\n';
